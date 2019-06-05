@@ -1,0 +1,39 @@
+﻿
+#main{width:650px; height:600px; margin:10px auto; border:1px #000 solid;}
+tr{ height:45px;}
+input{height:25px; border:1px #CCCCCC solid; width:200px;}
+div{font-size:12px;}
+#sex{height:12px; width:20px;}
+span{line-height:25px;}
+
+/*当鼠标放到文本框时，提示文本的样式*/
+.import_prompt{
+    border:solid 1px #ffcd00;
+    background-color:#ffffda;
+    padding-left:5px;
+    padding-right:5px;
+    line-height:25px;
+}
+/*当文本框内容不符合要求时，提示文本的样式*/
+.error_prompt{
+    border:solid 1px #ff3300;
+    background-color:#fff2e5;
+    background-image:url(../images/li_err.gif);
+    background-repeat:no-repeat;
+    background-position:5px 2px;
+    padding:2px 5px 0px 25px;
+    line-height:25px;
+}
+
+/*当文本框内容输入正确时，提示文本的样式*/
+.ok_prompt{
+	border:solid 1px #01be00;
+    background-color:#e6fee4;
+    background-image:url(../images/li_ok.gif);
+    background-repeat:no-repeat;
+    background-position:5px 2px;
+    padding:2px 5px 0px 25px;
+    line-height:25px;
+}
+
+

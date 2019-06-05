@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="user" namespace="/user" extends="default">	
+		<!-- 获取servletAIP -->
+		<action name="register" class="action.UserAction" method="register">
+			<result name="success" >/login.jsp</result>
+		</action>
+		<action name="login" class="action.UserAction" method="login">
+			<result name="success" type="chain" >initIndex</result>
+			<result name="error" >/login.jsp</result>
+		</action>
+		<action name="initIndex" class="action.InitAction" method="initIndex">
+            <result name="success">/main.jsp</result>
+        </action>
+				
+    </package>
+
+</struts>

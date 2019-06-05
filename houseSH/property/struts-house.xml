@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="house" namespace="/house" extends="default">	
+		<action name="initIndex" class="action.InitAction" method="initIndex">
+            <result name="success">/main.jsp</result>
+        </action>
+        <action name="searchHouse" class="action.HouseAction" method="searchHouse">
+            <result name="success">/main.jsp</result>
+        </action>
+        <action name="showHouseDetail" class="action.HouseAction" method="showHouseDetail">
+            <result name="success">/details.jsp</result>
+        </action>
+        <action name="initMy" class="action.InitAction" method="initMy">
+            <result name="success">/myhouse.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+        <action name="selectStreetByDistrict" class="action.StreetAction" method="selectStreetByDistrict">
+            <result name="success" type="chain">/login.jsp</result>
+        </action>
+        <action name="initRelease" class="action.InitAction" method="initRelease">
+            <result name="success">/release.jsp</result>
+        </action>
+			
+    </package>
+
+</struts>
